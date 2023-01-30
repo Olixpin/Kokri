@@ -29,26 +29,15 @@
   --denary: #ff6464;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.4em;
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -56,4 +45,47 @@ h1 {
     color: #213547;
     background-color: #ffffff;
   }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.footer,
+#error-page {
+  padding: 0 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .footer,
+  #error-page {
+    padding: 0 12px;
+  }
+}
+
+.footer-content,
+.error-content {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  text-decoration: underline;
 }
