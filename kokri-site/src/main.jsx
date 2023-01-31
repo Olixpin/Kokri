@@ -5,6 +5,7 @@ import { Error } from "./pages/Error"
 import { Location } from "./pages/Routes/"
 import "./index.css"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { AppProvider } from "./context/context"
 
 const router = createBrowserRouter([
   {
@@ -16,15 +17,17 @@ const router = createBrowserRouter([
 
   {
     path: "/location",
-    component: App,
-    element: <App />,
+    component: Location,
+    element: <Location />,
   },
 ])
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router}>
-      <App />
-    </RouterProvider>
+    <AppProvider>
+      <RouterProvider router={router}>
+        <App />
+      </RouterProvider>
+    </AppProvider>
   </React.StrictMode>
 )

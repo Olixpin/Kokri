@@ -2,14 +2,25 @@ import React from "react"
 import { Link } from "react-router-dom"
 import footerMenus from "../../utils/footerMenus"
 import socialMedias from "../../utils/socialMedias"
+import { useAppContext } from "../../context/context"
 import "./Footer.css"
+import { NewsLetter } from "../../components/NewsLetter"
 
 const Footer = () => {
+  const { openModal, isModalOpen } = useAppContext()
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-wrap">
-          <a href="#">Subscribe to our newsletter</a>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault()
+              openModal()
+            }}
+          >
+            Subscribe to our newsletter
+          </a>
           <Link to="/location">
             <b>Lagos Nigeria</b>
           </Link>
@@ -32,6 +43,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
+      {isModalOpen && <NewsLetter />}
     </footer>
   )
 }
