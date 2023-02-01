@@ -18,6 +18,13 @@
   gap: 0.8rem;
 }
 
+@media screen and (max-width: 425px) {
+  .footer-menus,
+  .social-medias {
+    flex-direction: column;
+  }
+}
+
 .copywright {
   font-size: 14px;
   font-weight: 300;

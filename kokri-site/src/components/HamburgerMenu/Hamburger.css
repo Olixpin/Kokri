@@ -1,0 +1,29 @@
+.hamburger-menu button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 20px;
+  height: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-menu button:hover {
+  opacity: 0.8;
+}
+
+.hamburger-menu button .bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--white);
+  transition: all 0.3s ease-in-out;
+}
+
+.background {
+  background-color: rgba(0, 0, 0, 0.462);
+}

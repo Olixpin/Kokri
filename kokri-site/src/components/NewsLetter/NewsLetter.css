@@ -1,3 +1,25 @@
+@keyframes dropFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes backToTop {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-400px);
+  }
+}
+
 .modal-content {
   position: relative;
   display: flex;
@@ -16,6 +38,7 @@
   -webkit-animation-duration: 0.7s;
   animation-duration: 0.7s;
   gap: 1rem;
+  animation: dropFromTop 0.7s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
@@ -42,10 +65,9 @@
 @media screen and (max-width: 500px) {
   .modal-content {
     width: 100vw;
+    max-width: 100vw;
     padding: 50px 20px 35px;
-    height: 100vh;
-    top: 0;
-    left: 0;
+    display: flow-root;
   }
 
   .form-input-1 {
