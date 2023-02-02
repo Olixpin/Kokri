@@ -21,6 +21,7 @@
   --tertiary: #ff6464;
   --input-border: #cbd6e2;
   --input-border-focus: #0098da;
+  --text-2: #b6b6b6;
 }
 
 h1,
@@ -118,4 +119,8 @@ a:hover {
 
 label {
   font-size: 13px;
+}
+
+ul {
+  list-style: none;
 }

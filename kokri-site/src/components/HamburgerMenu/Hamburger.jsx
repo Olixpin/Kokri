@@ -1,11 +1,10 @@
 import React, { useState } from "react"
 import "./Hamburger.css"
 import { Modal } from "../Modal"
-import { useAppContext } from "../../context/context"
+import { Menus } from "../Menus"
 
 const Hamburger = () => {
   const [open, setOpen] = useState(false)
-  const { openModal } = useAppContext()
 
   return (
     <div>
@@ -35,8 +34,15 @@ const Hamburger = () => {
       </div>
 
       {open && (
-        <Modal className="background">
-          <p>Hello world</p>
+        <Modal className="background menus-wrapper">
+          <div className="menu-container">
+            <div className="main-content">
+              <div className="col1">&nbsp;</div>
+              <div className="col2">
+                <Menus />
+              </div>
+            </div>
+          </div>
         </Modal>
       )}
     </div>
